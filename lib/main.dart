@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+
+import 'screens/nav_screen.dart';
 
 import 'package:hw_3/views/video_detail.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -12,29 +15,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'YouTube',
+      title: 'Flutter YouTube UI',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        brightness: Brightness.dark,
+        bottomNavigationBarTheme:
+            const BottomNavigationBarThemeData(selectedItemColor: Colors.white),
       ),
-      home: const YoutubeHomePage(title: 'Youtube Home Page'),
-    );
-  }
-}
-
-class YoutubeHomePage extends StatefulWidget {
-  const YoutubeHomePage({Key? key, required this.title}) : super(key: key);
-
-  final String title;
-
-  @override
-  State<YoutubeHomePage> createState() => _YoutubeHomePageState();
-}
-
-class _YoutubeHomePageState extends State<YoutubeHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
-      body: VideoDetailPage(),
+      home: NavScreen(),
     );
   }
 }
