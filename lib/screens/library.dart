@@ -7,7 +7,7 @@ class LibraryTab extends StatelessWidget {
     return Scaffold(
         appBar: CustomSliverAppBar(),
         body: Container(
-          color: Color(0xFF212121),
+            child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
@@ -73,6 +73,6 @@ class LibraryTab extends StatelessWidget {
               ),
             ],
           ),
-        ));
+        )));
   }
 }
