@@ -11,9 +11,8 @@ class User {
 }
 
 const User currentUser = User(
-  username: 'Marcus Ng',
-  profileImageUrl:
-  'https://yt3.ggpht.com/ytc/AAUvwniE2k5PgFu9yr4sBVEs9jdpdILdMc7ruiPw59DpS0k=s88-c-k-c0x00ffffff-no-rj',
+  username: 'John Steck',
+  profileImageUrl: 'https://avatars.githubusercontent.com/u/63707307?v=4',
   subscribers: '100K',
 );
 
@@ -45,8 +44,8 @@ final List<Video> videos = [
   Video(
     id: 'x606y4QWrxo',
     author: currentUser,
-    title: 'Flutter Clubhouse Clone UI Tutorial | Apps From Scratch',
-    thumbnailUrl: 'https://i.ytimg.com/vi/x606y4QWrxo/0.jpg',
+    title: 'Porsche Taycan Turbo S (761hp) - 0-270 km/h LAUNCH CONTROL🏁',
+    thumbnailUrl: 'https://i.ytimg.com/vi/h0IAgkHpU54/hq720.jpg',
     duration: '8:20',
     timestamp: DateTime(2021, 3, 20),
     viewCount: '10K',
@@ -56,9 +55,8 @@ final List<Video> videos = [
   Video(
     author: currentUser,
     id: 'vrPk6LB9bjo',
-    title:
-    'Build Flutter Apps Fast with Riverpod, Firebase, Hooks, and Freezed Architecture',
-    thumbnailUrl: 'https://i.ytimg.com/vi/vrPk6LB9bjo/0.jpg',
+    title: 'lofi hip hop radio - beats to relax/study to',
+    thumbnailUrl: 'https://i.ytimg.com/vi/5qap5aO4i9A/hq720_live.jpg',
     duration: '22:06',
     timestamp: DateTime(2021, 2, 26),
     viewCount: '8K',
@@ -68,48 +66,12 @@ final List<Video> videos = [
   Video(
     id: 'ilX5hnH8XoI',
     author: currentUser,
-    title: 'Flutter Instagram Stories',
-    thumbnailUrl: 'https://i.ytimg.com/vi/ilX5hnH8XoI/0.jpg',
+    title: 'Need For Speed in Real Life Part II',
+    thumbnailUrl: 'https://i.ytimg.com/vi/_V1URhdh8mI/hqdefault.jpg',
     duration: '10:53',
     timestamp: DateTime(2020, 7, 12),
     viewCount: '18K',
     likes: '1k',
     dislikes: '4',
-  ),
-];
-
-final List<Video> suggestedVideos = [
-  Video(
-    id: 'rJKN_880b-M',
-    author: currentUser,
-    title: 'Flutter Netflix Clone Responsive UI Tutorial | Web and Mobile',
-    thumbnailUrl: 'https://i.ytimg.com/vi/rJKN_880b-M/0.jpg',
-    duration: '1:13:15',
-    timestamp: DateTime(2020, 8, 22),
-    viewCount: '32K',
-    likes: '1.9k',
-    dislikes: '7',
-  ),
-  Video(
-    id: 'HvLb5gdUfDE',
-    author: currentUser,
-    title: 'Flutter Facebook Clone Responsive UI Tutorial | Web and Mobile',
-    thumbnailUrl: 'https://i.ytimg.com/vi/HvLb5gdUfDE/0.jpg',
-    duration: '1:52:12',
-    timestamp: DateTime(2020, 8, 7),
-    viewCount: '190K',
-    likes: '9.3K',
-    dislikes: '45',
-  ),
-  Video(
-    id: 'h-igXZCCrrc',
-    author: currentUser,
-    title: 'Flutter Chat UI Tutorial | Apps From Scratch',
-    thumbnailUrl: 'https://i.ytimg.com/vi/h-igXZCCrrc/0.jpg',
-    duration: '1:03:58',
-    timestamp: DateTime(2019, 10, 17),
-    viewCount: '358K',
-    likes: '20k',
-    dislikes: '85',
   ),
 ];
