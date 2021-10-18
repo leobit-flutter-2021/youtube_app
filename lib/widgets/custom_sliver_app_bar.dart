@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:hw_3/data/data.dart';
 
-class CustomSliverAppBar extends StatelessWidget {
+class CustomSliverAppBar extends StatelessWidget
+    implements PreferredSizeWidget {
   const CustomSliverAppBar({Key? key}) : super(key: key);
 
   @override
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
+
+  @override
   Widget build(BuildContext context) {
-    return SliverAppBar(
-      floating: true,
+    return AppBar(
       leadingWidth: 100.0,
       leading: Padding(
         padding: const EdgeInsets.only(left: 12.0),
@@ -27,10 +30,10 @@ class CustomSliverAppBar extends StatelessWidget {
           onPressed: () {},
         ),
         IconButton(
-          icon: CircleAvatar(foregroundImage: NetworkImage(currentUser.profileImageUrl)),
+          icon: CircleAvatar(
+              foregroundImage: NetworkImage(currentUser.profileImageUrl)),
           onPressed: () {},
         ),
-
       ],
     );
   }

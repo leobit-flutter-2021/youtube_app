@@ -6,9 +6,9 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: CustomSliverAppBar(),
       body: CustomScrollView(
         slivers: [
-          CustomSliverAppBar(),
           SliverPadding(
             padding: const EdgeInsets.only(bottom: 60.0),
             sliver: SliverList(
