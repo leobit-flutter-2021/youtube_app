@@ -1,44 +1,47 @@
 import 'package:flutter/material.dart';
-import 'package:hw_3/widgets/custom_sliver_app_bar.dart';
+
+import 'package:hw_3/data/colors.dart';
+
+import 'package:hw_3/widgets/app_bar.dart';
 
 class LibraryTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: CustomSliverAppBar(),
-        body: Container(
-            child: SingleChildScrollView(
+      appBar: CustomSliverAppBar(),
+      body: Container(
+        child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               ListTile(
-                leading: Icon(Icons.history, color: Color(0xFF909090)),
+                leading: Icon(Icons.history, color: suvaGrey),
                 title: Text(
                   'History',
                   style: TextStyle(color: Colors.white),
                 ),
               ),
               ListTile(
-                leading: Icon(Icons.file_download, color: Color(0xFF909090)),
+                leading: Icon(Icons.file_download, color: suvaGrey),
                 title: Text('Downloads', style: TextStyle(color: Colors.white)),
                 subtitle: Text('2 recommendations',
-                    style: TextStyle(color: Color(0xFF909090), fontSize: 12.0)),
+                    style: TextStyle(color: suvaGrey, fontSize: 12.0)),
               ),
               ListTile(
-                leading: Icon(Icons.video_library, color: Color(0xFF909090)),
+                leading: Icon(Icons.video_library, color: suvaGrey),
                 title:
                     Text('Your videos', style: TextStyle(color: Colors.white)),
               ),
               ListTile(
-                leading: Icon(Icons.attach_money, color: Color(0xFF909090)),
+                leading: Icon(Icons.attach_money, color: suvaGrey),
                 title: Text('Purchases', style: TextStyle(color: Colors.white)),
               ),
               ListTile(
-                leading: Icon(Icons.watch_later, color: Color(0xFF909090)),
+                leading: Icon(Icons.watch_later, color: suvaGrey),
                 title:
                     Text('Watch later', style: TextStyle(color: Colors.white)),
                 subtitle: Text('Videos you save for later',
-                    style: TextStyle(color: Color(0xFF909090), fontSize: 12.0)),
+                    style: TextStyle(color: suvaGrey, fontSize: 12.0)),
               ),
               Divider(color: Colors.white),
               Padding(
@@ -60,19 +63,20 @@ class LibraryTab extends StatelessWidget {
                 ),
               ),
               ListTile(
-                leading: Icon(Icons.add, color: Colors.lightBlue),
-                title: Text('New Playlist',
-                    style: TextStyle(color: Colors.lightBlue)),
+                leading: Icon(Icons.add, color: linkBlue),
+                title: Text('New Playlist', style: TextStyle(color: linkBlue)),
               ),
               ListTile(
-                leading: Icon(Icons.thumb_up, color: Color(0xFF909090)),
+                leading: Icon(Icons.thumb_up, color: suvaGrey),
                 title:
                     Text('Liked videos', style: TextStyle(color: Colors.white)),
                 subtitle: Text('4 Videos',
-                    style: TextStyle(color: Color(0xFF909090), fontSize: 12.0)),
+                    style: TextStyle(color: suvaGrey, fontSize: 12.0)),
               ),
             ],
           ),
-        )));
+        ),
+      ),
+    );
   }
 }

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:hw_3/data/video_detail_data.dart';
+
 import 'package:hw_3/data/colors.dart';
+import 'package:hw_3/data/data.dart';
 
 class CommentsSection extends StatelessWidget {
   const CommentsSection({Key? key}) : super(key: key);

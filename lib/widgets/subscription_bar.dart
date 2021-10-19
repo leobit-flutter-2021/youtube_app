@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'package:hw_3/widgets/util.dart';
-import 'package:hw_3/data/video_detail_data.dart';
 import 'package:hw_3/data/colors.dart';
+import 'package:hw_3/data/data.dart';
+
+import 'package:hw_3/widgets/util.dart';
 
 class SubscriptionBar extends StatelessWidget {
   const SubscriptionBar({Key? key}) : super(key: key);
@@ -38,7 +39,7 @@ class ChannelInformation extends StatelessWidget {
               height: 40,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage(currentChannel.logoImagePath),
+                  image: AssetImage(currentVideoDetailChannel.logoImagePath),
                   fit: BoxFit.fill,
                 ),
                 borderRadius: BorderRadius.circular(100.0),
@@ -52,7 +53,7 @@ class ChannelInformation extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  currentChannel.name,
+                  currentVideoDetailChannel.name,
                   style: const TextStyle(
                       color: accentLightGrey,
                       fontWeight: FontWeight.bold,
@@ -62,8 +63,8 @@ class ChannelInformation extends StatelessWidget {
                   height: 2,
                 ),
                 Text(
-                  formatNumber(currentChannel.subscribersCounter) +
-                      ' subscribers',
+                  '${formatNumber(currentVideoDetailChannel.subscribersCounter)}'
+                  ' subscribers',
                   style: const TextStyle(color: textLightGrey, fontSize: 13),
                 ),
               ],

@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import 'screens/nav_screen.dart';
-
-import 'package:hw_3/views/video_detail.dart';
+import 'package:hw_3/screens/nav_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -20,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         brightness: Brightness.dark,
         bottomNavigationBarTheme:
-        const BottomNavigationBarThemeData(selectedItemColor: Colors.white),
+            const BottomNavigationBarThemeData(selectedItemColor: Colors.white),
       ),
       home: NavScreen(),
     );

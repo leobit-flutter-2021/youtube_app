@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:hw_3/views/video_detail.dart';
-import 'library.dart';
 
-import 'home_screen.dart';
+import 'package:hw_3/screens/home_screen.dart';
+import 'package:hw_3/screens/library_screen.dart';
 
 class NavScreen extends StatefulWidget {
   const NavScreen({Key? key}) : super(key: key);
@@ -28,12 +27,15 @@ class _NavScreenState extends State<NavScreen> {
         body: Stack(
           children: _screens
               .asMap()
-              .map((i, screen) => MapEntry(
-              i,
-              Offstage(
-                offstage: _selectedIndex != i,
-                child: screen,
-              )))
+              .map(
+                (i, screen) => MapEntry(
+                  i,
+                  Offstage(
+                    offstage: _selectedIndex != i,
+                    child: screen,
+                  ),
+                ),
+              )
               .values
               .toList(),
         ),

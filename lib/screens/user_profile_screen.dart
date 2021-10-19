@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:hw_3/models/user.dart';
+
+import 'package:hw_3/data/colors.dart';
+import 'package:hw_3/data/data.dart';
 
 class UserProfilePage extends StatelessWidget {
-  final UserProfile currentUser;
+  final Channel currentUser;
 
   UserProfilePage({required this.currentUser});
 
@@ -16,7 +18,7 @@ class UserProfilePage extends StatelessWidget {
             },
             child: Icon(Icons.close, color: Colors.white)),
         title: Text('Account', style: TextStyle(color: Colors.white)),
-        backgroundColor: Color(0xFF282828),
+        backgroundColor: suvaGrey,
       ),
       body: Container(
           color: Color(0xFF282828),
@@ -28,13 +30,14 @@ class UserProfilePage extends StatelessWidget {
                   child: Row(
                     children: <Widget>[
                       CircleAvatar(
-                          backgroundImage: currentUser.profilePicture,
+                          backgroundImage:
+                              AssetImage(currentUser.logoImagePath),
                           radius: 30),
                       SizedBox(width: 10.0),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
-                          Text(currentUser.username,
+                          Text(currentUser.name,
                               style: TextStyle(
                                   color: Colors.white, fontSize: 16.0)),
                           SizedBox(height: 5.0),
@@ -43,7 +46,7 @@ class UserProfilePage extends StatelessWidget {
                                   color: Colors.white, fontSize: 16.0)),
                           SizedBox(height: 5.0),
                           Text('Manage your Google Account',
-                              style: TextStyle(color: Colors.lightBlue))
+                              style: TextStyle(color: linkBlue))
                         ],
                       )
                     ],
@@ -51,51 +54,48 @@ class UserProfilePage extends StatelessWidget {
                 ),
                 Divider(color: Colors.white),
                 ListTile(
-                  leading: Icon(Icons.account_box, color: Color(0xFF909090)),
+                  leading: Icon(Icons.account_box, color: suvaGrey),
                   title: Text('Your channel',
                       style: TextStyle(color: Colors.white)),
                 ),
                 ListTile(
-                  leading: Icon(Icons.settings_applications,
-                      color: Color(0xFF909090)),
+                  leading: Icon(Icons.settings_applications, color: suvaGrey),
                   title: Text('Youtube Studio',
                       style: TextStyle(color: Colors.white)),
                 ),
                 ListTile(
-                  leading: Icon(Icons.access_time, color: Color(0xFF909090)),
+                  leading: Icon(Icons.access_time, color: suvaGrey),
                   title: Text('Time watched',
                       style: TextStyle(color: Colors.white)),
                 ),
                 ListTile(
-                  leading: Icon(Icons.video_library, color: Color(0xFF909090)),
+                  leading: Icon(Icons.video_library, color: suvaGrey),
                   title: Text('Get YouTube Premium',
                       style: TextStyle(color: Colors.white)),
                 ),
                 ListTile(
-                  leading:
-                      Icon(Icons.monetization_on, color: Color(0xFF909090)),
+                  leading: Icon(Icons.monetization_on, color: suvaGrey),
                   title: Text('Paid memberships',
                       style: TextStyle(color: Colors.white)),
                 ),
                 ListTile(
-                  leading:
-                      Icon(Icons.supervisor_account, color: Color(0xFF909090)),
+                  leading: Icon(Icons.supervisor_account, color: suvaGrey),
                   title: Text('Switch account',
                       style: TextStyle(color: Colors.white)),
                 ),
                 ListTile(
-                  leading: Icon(Icons.security, color: Color(0xFF909090)),
+                  leading: Icon(Icons.security, color: suvaGrey),
                   title: Text('Your data in YouTube',
                       style: TextStyle(color: Colors.white)),
                 ),
                 Divider(color: Colors.white),
                 ListTile(
-                  leading: Icon(Icons.settings, color: Color(0xFF909090)),
+                  leading: Icon(Icons.settings, color: suvaGrey),
                   title:
                       Text('Settings', style: TextStyle(color: Colors.white)),
                 ),
                 ListTile(
-                  leading: Icon(Icons.help, color: Color(0xFF909090)),
+                  leading: Icon(Icons.help, color: suvaGrey),
                   title: Text('Help & feedback',
                       style: TextStyle(color: Colors.white)),
                 ),

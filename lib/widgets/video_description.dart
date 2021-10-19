@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:timeago/timeago.dart' as timeago;
 
-import 'package:hw_3/data/video_detail_data.dart';
 import 'package:hw_3/data/colors.dart';
+import 'package:hw_3/data/data.dart';
+
 import 'package:hw_3/widgets/util.dart';
 
 class VideoDescription extends StatelessWidget {
@@ -52,10 +54,10 @@ class VideoDetailsPanel extends StatelessWidget {
                     style: const TextStyle(color: textLightGrey, fontSize: 13),
                     children: [
                       TextSpan(
-                          text: formatNumber(currentVideo.views) +
-                              ' views • ' +
-                              currentVideo.timeAgo +
-                              ' '),
+                        text:
+                            '${formatNumber(currentVideo.viewsCounter)} views • '
+                            '${timeago.format(currentVideo.timestamp)} ',
+                      ),
                       TextSpan(
                         text: currentVideo.tags.join(' '),
                         style: const TextStyle(

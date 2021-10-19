@@ -54,7 +54,8 @@ dev_dependencies:
 flutter:
   assets:
     - assets/images/
-    - assets/images/video_detail/
+    - assets/images/home_screen/logos/
+    - assets/images/profile_screen/avatars/
     - assets/images/video_detail/avatars/
     - assets/images/video_detail/logos/
     - assets/images/video_detail/miniatures/
