@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:hw_3/views/video_detail.dart';
 import 'package:timeago/timeago.dart' as timeago;
 import 'package:hw_3/data/data.dart';
-
-// final selectedVideoProvider = StateProvider<Video?>((ref) => null);
-
 
 class VideoCard extends StatelessWidget {
   final Video video;
@@ -16,25 +14,35 @@ class VideoCard extends StatelessWidget {
       children: [
         Stack(
           children: [
-            Image.network(
-              video.thumbnailUrl,
-              height: 220.0,
-              width: double.infinity,
-              fit: BoxFit.cover,
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const VideoDetailPage()),
+                );
+              },
+              child: Image.network(
+                video.thumbnailUrl,
+                height: 220.0,
+                width: double.infinity,
+                fit: BoxFit.cover,
+              ),
             ),
             Positioned(
               bottom: 8.0,
               right: 8.0,
               child: Container(
-                  padding: const EdgeInsets.all(4.0),
-                  color: Colors.black,
-                  child: Text(
-                    video.duration,
-                    style: Theme.of(context)
-                        .textTheme
-                        .caption!
-                        .copyWith(color: Colors.white),
-                  )),
+                padding: const EdgeInsets.all(4.0),
+                color: Colors.black,
+                child: Text(
+                  video.duration,
+                  style: Theme.of(context)
+                      .textTheme
+                      .caption!
+                      .copyWith(color: Colors.white),
+                ),
+              ),
             )
           ],
         ),

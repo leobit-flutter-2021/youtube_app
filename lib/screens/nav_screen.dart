@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hw_3/views/video_detail.dart';
 import 'library.dart';
 
 import 'home_screen.dart';

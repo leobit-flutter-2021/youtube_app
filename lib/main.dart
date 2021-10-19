@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         brightness: Brightness.dark,
         bottomNavigationBarTheme:
-            const BottomNavigationBarThemeData(selectedItemColor: Colors.white),
+        const BottomNavigationBarThemeData(selectedItemColor: Colors.white),
       ),
       home: NavScreen(),
     );
