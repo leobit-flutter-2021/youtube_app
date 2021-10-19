@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:hw_3/data/data.dart';
+import 'package:hw_3/models/user.dart';
+import 'package:hw_3/screens/user_profile_screen.dart';
 
 class CustomSliverAppBar extends StatelessWidget
     implements PreferredSizeWidget {
-  const CustomSliverAppBar({Key? key}) : super(key: key);
+    CustomSliverAppBar({Key? key}) : super(key: key);
 
   @override
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
+
+  final UserProfile userProfile = new UserProfile(username: "John Steck", profilePicture: AssetImage("assets/images/profile.png"));
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +36,10 @@ class CustomSliverAppBar extends StatelessWidget
         IconButton(
           icon: CircleAvatar(
               foregroundImage: NetworkImage(currentUser.profileImageUrl)),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) =>  UserProfilePage(currentUser:  userProfile)),
+            );
+          },
         ),
       ],
     );
