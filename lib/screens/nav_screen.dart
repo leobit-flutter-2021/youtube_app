@@ -24,20 +24,22 @@ class _NavScreenState extends State<NavScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Stack(
-          children: _screens
-              .asMap()
-              .map(
-                (i, screen) => MapEntry(
-                  i,
-                  Offstage(
-                    offstage: _selectedIndex != i,
-                    child: screen,
+        body: SafeArea(
+          child: Stack(
+            children: _screens
+                .asMap()
+                .map(
+                  (i, screen) => MapEntry(
+                    i,
+                    Offstage(
+                      offstage: _selectedIndex != i,
+                      child: screen,
+                    ),
                   ),
-                ),
-              )
-              .values
-              .toList(),
+                )
+                .values
+                .toList(),
+          ),
         ),
         bottomNavigationBar: BottomNavigationBar(
             type: BottomNavigationBarType.fixed,

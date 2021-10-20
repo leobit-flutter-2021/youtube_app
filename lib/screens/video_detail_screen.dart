@@ -16,20 +16,22 @@ class VideoDetailPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: bgLightGrey,
-      body: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        physics: const ClampingScrollPhysics(),
-        child: Column(
-          children: [
-            const VideoDescription(),
-            ActionButtonsBar(),
-            const HorizontalSeparator(height: 1),
-            const SubscriptionBar(),
-            const HorizontalSeparator(height: 1),
-            const CommentsSection(),
-            const HorizontalSeparator(height: 20),
-            const RecommendationsSection(),
-          ],
+      body: SafeArea(
+        child: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          physics: const ClampingScrollPhysics(),
+          child: Column(
+            children: [
+              const VideoDescription(),
+              ActionButtonsBar(),
+              const HorizontalSeparator(height: 1),
+              const SubscriptionBar(),
+              const HorizontalSeparator(height: 1),
+              const CommentsSection(),
+              const HorizontalSeparator(height: 20),
+              const RecommendationsSection(),
+            ],
+          ),
         ),
       ),
     );
