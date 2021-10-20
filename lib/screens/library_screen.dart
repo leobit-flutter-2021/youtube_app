@@ -8,7 +8,7 @@ class LibraryTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomSliverAppBar(),
+      appBar: CustomAppBar(),
       body: Container(
         child: SingleChildScrollView(
           child: Column(

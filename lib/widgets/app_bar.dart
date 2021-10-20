@@ -4,9 +4,9 @@ import 'package:hw_3/data/data.dart';
 
 import 'package:hw_3/screens/user_profile_screen.dart';
 
-class CustomSliverAppBar extends StatelessWidget
+class CustomAppBar extends StatelessWidget
     implements PreferredSizeWidget {
-  CustomSliverAppBar({Key? key}) : super(key: key);
+  CustomAppBar({Key? key}) : super(key: key);
 
   @override
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);

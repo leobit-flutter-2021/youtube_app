@@ -49,6 +49,7 @@ class ActionButtonsBar extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: actionButtons,
           ),
-        ));
+        ),
+    );
   }
 }

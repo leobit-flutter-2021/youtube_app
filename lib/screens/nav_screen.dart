@@ -71,6 +71,7 @@ class _NavScreenState extends State<NavScreen> {
                 activeIcon: Icon(Icons.video_library),
                 label: 'Library',
               ),
-            ]));
+            ])
+    );
   }
 }
