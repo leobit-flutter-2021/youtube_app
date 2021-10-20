@@ -18,10 +18,10 @@ class UserProfilePage extends StatelessWidget {
             },
             child: Icon(Icons.close, color: Colors.white)),
         title: Text('Account', style: TextStyle(color: Colors.white)),
-        backgroundColor: suvaGrey,
+        backgroundColor: nero,
       ),
       body: Container(
-          color: Color(0xFF282828),
+          color: nero,
           child: SingleChildScrollView(
             child: Column(
               children: <Widget>[
