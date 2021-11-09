@@ -1,7 +1,11 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 import 'package:hw_3/data/colors.dart';
 import 'package:hw_3/data/data.dart';
+import 'package:hw_3/globalStateManagement/userImageManagement.dart';
+import 'package:provider/src/provider.dart';
 
 class UserProfilePage extends StatelessWidget {
   final Channel currentUser;
@@ -30,10 +34,18 @@ class UserProfilePage extends StatelessWidget {
                     padding: EdgeInsets.all(20.0),
                     child: Row(
                       children: <Widget>[
-                        CircleAvatar(
-                            backgroundImage:
-                                AssetImage(currentUser.logoImagePath),
-                            radius: 30),
+                        GestureDetector(
+                          onTap: () {
+                            context.read<ImageManagement>().generateRandomImage();
+                            },
+                          child: Builder(
+                            builder: (context) {
+                              return CircleAvatar(
+                                  backgroundImage: NetworkImage(context.watch<ImageManagement>().randomImage),
+                                  radius: 30);
+                            }
+                          ),
+                        ),
                         SizedBox(width: 10.0),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,

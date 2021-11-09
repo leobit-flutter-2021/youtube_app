@@ -57,7 +57,7 @@ class VideoComments {
 Channel currentUser = Channel(
   'John Steck',
   logoImagePath: 'assets/images/profile_screen/avatars/profile.png',
-  imageUrl: 'https://avatars.githubusercontent.com/u/63707307?v=4',
+  imageUrl: 'https://avatars.githubusercontent.com/u/63707307',
   subscribersCounter: 100000,
 );
 
