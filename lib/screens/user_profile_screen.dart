@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 import 'package:hw_3/data/colors.dart';
@@ -5,6 +7,14 @@ import 'package:hw_3/data/data.dart';
 
 class UserProfilePage extends StatelessWidget {
   final Channel currentUser;
+
+  void randomNumber() {
+    var random = new Random();
+    int min = 10;
+    int max = 200;
+    int result = min + random.nextInt(max - min);
+    print(result);
+  }
 
   UserProfilePage({required this.currentUser});
 
@@ -30,10 +40,13 @@ class UserProfilePage extends StatelessWidget {
                     padding: EdgeInsets.all(20.0),
                     child: Row(
                       children: <Widget>[
-                        CircleAvatar(
-                            backgroundImage:
-                                AssetImage(currentUser.logoImagePath),
-                            radius: 30),
+                        GestureDetector(
+                          onTap: () {},
+                          child: CircleAvatar(
+                              backgroundImage:
+                                  AssetImage(currentUser.logoImagePath),
+                              radius: 30),
+                        ),
                         SizedBox(width: 10.0),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
