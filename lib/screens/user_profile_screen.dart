@@ -4,17 +4,11 @@ import 'package:flutter/material.dart';
 
 import 'package:hw_3/data/colors.dart';
 import 'package:hw_3/data/data.dart';
+import 'package:hw_3/globalStateManagement/userImageManagement.dart';
+import 'package:provider/src/provider.dart';
 
 class UserProfilePage extends StatelessWidget {
   final Channel currentUser;
-
-  void randomNumber() {
-    var random = new Random();
-    int min = 10;
-    int max = 200;
-    int result = min + random.nextInt(max - min);
-    print(result);
-  }
 
   UserProfilePage({required this.currentUser});
 
@@ -41,11 +35,16 @@ class UserProfilePage extends StatelessWidget {
                     child: Row(
                       children: <Widget>[
                         GestureDetector(
-                          onTap: () {},
-                          child: CircleAvatar(
-                              backgroundImage:
-                                  AssetImage(currentUser.logoImagePath),
-                              radius: 30),
+                          onTap: () {
+                            context.read<ImageManagement>().generateRandomImage();
+                            },
+                          child: Builder(
+                            builder: (context) {
+                              return CircleAvatar(
+                                  backgroundImage: NetworkImage(context.watch<ImageManagement>().randomImage),
+                                  radius: 30);
+                            }
+                          ),
                         ),
                         SizedBox(width: 10.0),
                         Column(

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:hw_3/globalStateManagement/userImageManagement.dart';
+import 'package:provider/src/provider.dart';
 import 'package:timeago/timeago.dart' as timeago;
 
 import 'package:hw_3/data/data.dart';
@@ -59,8 +61,12 @@ class VideoCard extends StatelessWidget {
             children: [
               GestureDetector(
                 onTap: () => print('Navigate to profile'),
-                child: CircleAvatar(
-                  foregroundImage: NetworkImage(video.channel.imageUrl),
+                child: Builder(
+                  builder: (context) {
+                    return CircleAvatar(
+                      foregroundImage: NetworkImage(context.watch<ImageManagement>().randomImage),
+                    );
+                  }
                 ),
               ),
               const SizedBox(width: 8.0),
